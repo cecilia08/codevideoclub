@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #641717;
+    color: #ffffff;
+    padding: 10px 0;
+}
+
+.logo img {
+    max-width: 100px;
+}
+
+.search-bar {
+    display: inline-block;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
+}
+
+.search-bar input[type="text"] {
+    padding: 8px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    display: flex;
+
+}
+
+.login-register.button{
+    color: #3f454b;
+}
+
+.search-bar button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #664242;
+    color: #fff;
+    border-radius: 0 4px 4px 0;
+}
+
+
+/* Estilos para los botones */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1a2c41;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.button:hover {
+    background-color: #cf6666;
+}
+
+/* Estilos para el contenido principal */
+.main {
+    padding: 20px;
+}
+
+.icon-row {
+    display: flex;
+    justify-content: center;
+}
+
+.icon {
+    margin: 0 10px;
+    font-size: 24px;
+}
+.dropdown {
+    font-size: 24px; /* Tamaño de la fuente del desplegable */
+    width: 250px; /* Anchura del desplegable */
+    height: 40px; /* Altura del desplegable */
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 0px 0; /* Se reduce el padding para hacerlo más estrecho */
+    text-align: center;
+    margin-top: 50px; /* Se añade un margen superior para colocarlo más abajo */
+}
+
+.footer-buttons {
+    margin-top: 10px;
+}
+
+.footer-buttons p {
+    margin-bottom: 10px;
+}
+
+.footer-buttons .button {
+    margin: 0 5px;
+}
+
+
+@media only screen and (max-width: 992px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .search-bar {
+        order: 2;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .logo img {
+        display: block;
+        margin: 0 auto;
+        max-width: 80px; /* Menor tamaño de logo para pantallas pequeñas */
+    }
+
+    .login-register, .button {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .button {
+        margin: 5px 0; /* Menos espacio entre botones para ahorrar espacio */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        text-align: center;
+        padding: 5px;
+    }
+
+    .search-bar input[type="text"], .search-bar button {
+        width: 90%; /* Aumenta el tamaño en pantallas muy pequeñas */
+    }
+
+    .search-bar {
+        flex-direction: column;
+    }
+
+    .search-bar button {
+        width: 50%;
+        margin-top: 5px; /* Espacio entre el input y el botón en diseños verticales */
+    }
+
+    .logo img {
+        max-width: 60px; /* Aún más pequeño para pantallas muy pequeñas */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .main, .footer {
+        padding: 10px;
+    }
+
+    .icon {
+        font-size: 20px; /* Tamaño de ícono reducido para pequeñas pantallas */
+    }
+}
+

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retrocinema</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="logo.png" alt="Logo">
+      </div>
+
+      <div class="search-bar">
+        <input type="text" placeholder="Buscar">
+        <button type="submit">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+      
+      <div>
+      <a href="inicio_sesion.html" class="button">Iniciar sesión</a>
+      </div>
+
+      <div class="login-register">
+        <a href="inicio.html" class="button">Inicio</a>
+        <a href="cuenta.html" class="button">Cuenta</a>
+        <a href="registro.html" class="button">Registrarse</a>
+        <a href="configuracion.html" class="button">Configuración</a>
+        <a href="cerrar_sesion.html" class="button">Cerrar sesión</a>
+      </div> 
+
+      
+      <!-- Botón desplegable de categorías -->
+      <div class="dropdown">
+        <select onchange="location = this.value;">
+          <option value="#" selected disabled>Selecciona una categoría</option>
+          <option value="accion.html">Acción</option>
+          <option value="aventura.html">Aventura</option>
+          <option value="comedia.html">Comedia</option>
+          <option value="drama.html">Drama</option>
+          <!-- Agrega más categorías según sea necesario -->
+        </select>
+      </div>
+    </div>
+  </header>
+
+
+  <main>
+    <div class="container">
+      <!-- Galería de imágenes -->
+      <div class="image-gallery">
+        <a href="peliculas/goonies-detalles.html">
+          <img src="goonies.jpg" alt="Carátula de The Goonies" width="188" height="273">
+        </a>
+        <a href="dirtydancing.html">
+          <img src="dirtydancing.jpg" alt="Carátula de The Goonies" width="188" height="273">
+        </a>
+        
+        <!-- Agrega más imágenes según sea necesario -->
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <!-- Botón de Volver a Inicio -->
+      <a href="inicio.html" class="button">Volver a Inicio</a>
+      
+      <div class="footer-buttons">
+       
+        <a href="avisos_legales.html" class="button">Avisos legales</a>
+        <a href="politicas_cookies.html" class="button">Políticas de cookies</a>
+        <a href="politicas_privacidad.html" class="button">Políticas de privacidad</a>
+        
+        <p> </p>
+        <p> </p>
+        <p> </p>
+        <p>&copy; 2024 Retrocinema</p>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
