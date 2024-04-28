@@ -4,81 +4,131 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Retrocinema</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style_inicio.css">
 </head>
 <body>
   <header>
-    <div class="container">
-      <div class="logo">
-        <img src="logo.png" alt="Logo">
-      </div>
-
-      <div class="search-bar">
-        <input type="text" placeholder="Buscar">
-        <button type="submit">
-          <i class="fas fa-search"></i>
-        </button>
-      </div>
-      
-      <div>
-      <a href="inicio_sesion.html" class="button">Iniciar sesión</a>
-      </div>
-
-      <div class="login-register">
-        <a href="inicio.html" class="button">Inicio</a>
-        <a href="cuenta.html" class="button">Cuenta</a>
-        <a href="registro.html" class="button">Registrarse</a>
-        <a href="configuracion.html" class="button">Configuración</a>
-        <a href="cerrar_sesion.html" class="button">Cerrar sesión</a>
-      </div> 
-
-      
-      <!-- Botón desplegable de categorías -->
-      <div class="dropdown">
-        <select onchange="location = this.value;">
-          <option value="#" selected disabled>Selecciona una categoría</option>
-          <option value="accion.html">Acción</option>
-          <option value="aventura.html">Aventura</option>
-          <option value="comedia.html">Comedia</option>
-          <option value="drama.html">Drama</option>
-          <!-- Agrega más categorías según sea necesario -->
-        </select>
-      </div>
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
     </div>
+      <nav>
+        <ul>
+          <li><a href="inicio.html">Inicio</a></li>
+          <li><a href="#0">Categoría</a>
+            <ul>
+              <li><a href="accion.html">Acción</a></li>
+              <li><a href="aventura.html">Aventura</a></li>
+              <li><a href="comedia.html">Comedia</a></li>
+              <li><a href="accion.html">Acción</a></li>
+              <li><a href="drama.html">Drama</a></li>
+              <li><a href="romance.html">Romance</a></li>
+            </ul>
+          </li>
+          <li><a href="configuracion.html">Configuración</a</li>
+          <li>
+            <a href="#0">Usuario</a>
+            <ul>
+              <li><a href="inicio_sesion.html">Inicio sesión</a></li>
+              <li><a href="registro.html">Registro</a></li>
+              <li><a href="cuenta.html">Cuenta</a></li>
+              <li><a href="cerrar_sesion.html">Cerrar sesión</a></li>
+            </ul>
+        </ul>
+      </nav>
+      <form class="form">
+        <label for="search">
+            <input class="input" type="text" required="" placeholder="Buscar" id="search">
+            <div class="fancy-bg"></div>
+            <div class="search">
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="r-14j79pv r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-4wgw6l r-f727ji r-bnwqim r-1plcrui r-lrvibr">
+                    <g>
+                        <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+                    </g>
+                </svg>
+            </div>
+            <button class="close-btn" type="reset">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                </svg>
+            </button>
+        </label>
+    </form>
   </header>
-
-
+      
+      
   <main>
     <div class="container">
-      <!-- Galería de imágenes -->
       <div class="image-gallery">
+        <h1></h1>
+      <!-- Galería de imágenes -->
         <a href="peliculas/goonies-detalles.html">
           <img src="goonies.jpg" alt="Carátula de The Goonies" width="188" height="273">
         </a>
-        <a href="dirtydancing.html">
-          <img src="dirtydancing.jpg" alt="Carátula de The Goonies" width="188" height="273">
+        <a href="indianajones.html">
+          <img src="indianajones_arca.jpg" alt="Carátula de Indiana Jones"  width="188" height="273">
         </a>
+        <a href="dirtydancing.html">
+          <img src="dirtydancing.jpg" alt="Carátula de Dirty Dancing"  width="188" height="273">
+        </a>
+        <a href="jungladecristal.html">
+          <img src="Jungladecristal.jpg" alt="Carátula de Jungla de cristal"  width="188" height="273">
+        </a>
+      </a>
+      <a href="torosalvaje.html">
+        <img src="torosalvaje.jpeg" alt="Carátula de Toro salvaje"  width="188" height="273">
+      </a>
+        <a href="atrapadoeneltiempo.html">
+          <img src="atrapadoeneltiempo.jpg" alt="Carátula de Atrapado en el tiempo"  width="188" height="273">
+        </a>
+        <a href="buenosmuchachos.html">
+          <img src="buenosmuchachos.webp" alt="Carátula de Buenos muchachos"  width="188" height="273">
+        </a>
+        <a href="cadenaperpetua.html">
+          <img src="cadenaperpetua.jpg" alt="Carátula de Cadena perpetua"  width="188" height="273">
+        </a>
+        <a href="matrix.html">
+          <img src="matrix.jpg" alt="Carátula de Matrix"  width="188" height="273">
+        </a><a href="cazafantasmas.html">
+          <img src="cazafantasmas.webp" alt="Carátula de Cazafantasmas"  width="188" height="273">
+        </a>
+        <a href="starwars.html">
+          <img src="starwars.jpg" alt="Carátula de Star Wars"  width="188" height="273">
+        </a>
+        <a href="regresoalfuturo.html">
+          <img src="regresoalfuturo.jpg" alt="Carátula de "  width="Regreso al futuro" height="273">
+        </a>
+        <a href="cuandoharryencontroasally.html">
+          <img src="cuando-harry-encontro-a-sally.jpg" alt="Carátula de Cuando Harry encontro a Sally"  width="188" height="273">
+        </a>
+      </a>
+      <a href="terminator.html">
+        <img src="terminator.jpg" alt="Carátula de Terminator"  width="188" height="273">
+      </a>
+        <a href="soloencasa.html">
+          <img src="solonecasa.webp" alt="Carátula de Solo en casa"  width="188" height="273">
+        </a>
+      </a>
+      <a href="princesaprometida.html">
+        <img src="princesaprometida.webp" alt="Carátula de Princesa prometida"  width="188" height="273">
+      </a>
+
+
+        
         
         <!-- Agrega más imágenes según sea necesario -->
-      </div>
     </div>
+  </div>
   </main>
-
   <footer>
     <div class="container">
-      <!-- Botón de Volver a Inicio -->
-      <a href="inicio.html" class="button">Volver a Inicio</a>
-      
+      <p>&copy; 2024 Retrocinema</p>
       <div class="footer-buttons">
        
         <a href="avisos_legales.html" class="button">Avisos legales</a>
         <a href="politicas_cookies.html" class="button">Políticas de cookies</a>
         <a href="politicas_privacidad.html" class="button">Políticas de privacidad</a>
+      
         
-        <p> </p>
-        <p> </p>
-        <p> </p>
-        <p>&copy; 2024 Retrocinema</p>
       </div>
     </div>
   </footer>

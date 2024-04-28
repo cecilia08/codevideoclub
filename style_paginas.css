@@ -2,7 +2,7 @@
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
-    background-color: #641717;
+    background-color: #b36060;
     color: #ffffff;
 }
 
@@ -14,7 +14,7 @@ body {
 
 /* Estilos para el encabezado */
 header {
-    background-color: #641717;
+    background-color: #b36060;
     color: #ffffff;
     padding: 10px 0;
 }
@@ -53,7 +53,7 @@ header {
 }
 
 .button:hover {
-    background-color: #cf6666;
+    background-color: #842424;
 }
 
 /* Estilos para el contenido principal */
@@ -74,7 +74,7 @@ header {
 
 /* Estilos para el footer */
 footer {
-    background-color: #8b3838;
+    background-color: #b36060;
     color: #fff;
     padding: 0px 0; /* Se reduce el padding para hacerlo más estrecho */
     text-align: center;

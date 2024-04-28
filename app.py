@@ -1,7 +1,13 @@
-from flask import Flask, request, redirect, url_for, session
+from flask import Flask, request, redirect, url_for, session, render_template
 
 app = Flask(__name__)
 app.secret_key = 'tu_clave_secreta'
+
+#Es cosa mía
+@app.route('/', methods= ["POST"])
+def index():
+    return render_template("accion.html")
+
 
 # Simulación de usuarios y sus roles (estándar o premium)
 usuarios = {
@@ -24,6 +30,7 @@ def iniciar_sesion():
         # Si las credenciales son incorrectas, redirige al usuario de vuelta al formulario de inicio de sesión
         return redirect(url_for('formulario_inicio_sesion'))
 
+
 @app.route('/')
 def formulario_inicio_sesion():
     return 'Formulario de inicio de sesión aquí'
@@ -36,5 +43,8 @@ def inicio():
 def premium():
     return 'Página de inicio para usuarios premium'
 
+
+
 if __name__ == '__main__':
     app.run(debug=True)
+
