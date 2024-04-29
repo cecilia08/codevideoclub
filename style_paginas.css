@@ -2,19 +2,45 @@
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
-    background-color: #b36060;
     color: #ffffff;
+    background-image:url(fondo.jpg) ;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size: cover;
+    
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 500px;
+    margin: 50px auto;
     padding: 20px;
+    background-color: #ba7979;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align:center;
+    justify-content: center;
+    line-height: 0.2;
+
+    
+}
+
+
+.form-group{
+    text-align:center;
+}
+
+.container_footer {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1a2c41;
+    text-align:center;
+    
 }
 
 /* Estilos para el encabezado */
 header {
-    background-color: #b36060;
+    background-color: #ba7979;
     color: #ffffff;
     padding: 10px 0;
 }
@@ -42,10 +68,14 @@ header {
 }
 
 /* Estilos para los botones */
+
+.submit{
+    justify-content: center;
+}
 .button {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #2d3b4b;
+    padding: 20px 20px;
+    background-color: #504b4b;
     color: #fff;
     text-decoration: none;
     border-radius: 4px;
@@ -74,7 +104,7 @@ header {
 
 /* Estilos para el footer */
 footer {
-    background-color: #b36060;
+    background-color: #1a2c41;
     color: #fff;
     padding: 0px 0; /* Se reduce el padding para hacerlo más estrecho */
     text-align: center;
