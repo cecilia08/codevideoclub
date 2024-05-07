@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cerrar Sesión</title>
+  <link rel="stylesheet" href="style_paginas.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Cerrar Sesión</h1>
+    <br>
+  
+  <?php
+    // Inicia o reanuda una sesión
+    session_start();
+    
+    // Destruye todos los datos registrados en una sesión
+    session_destroy();
+  ?>
+  
+  <p>Tu sesión ha sido cerrada.</p>
+  <br>
+  <p><a href="/inicio/inicio.html" class="back">Volver a Inicio</a></p>
+
+</div>
+  
+ 
+</body>
+  
+</html>

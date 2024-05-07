@@ -1,0 +1,58 @@
+<!-- Formulario para añadir una película -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modificar peliculas</title>
+</head>
+<body>
+  <header>
+  <h1>Panel modificar peliculas</h1>
+  </header>
+
+  <main>
+    <form action="agregar_pelicula.py" method="POST">
+      <label for="titulo">Título:</label>
+      <input type="text" id="titulo" name="titulo" required><br>
+
+      <label for="estreno">Año estreno:</label>
+      <input type="estreno" id="estreno" name="estreno" required><br>
+
+      <label for="precio">Precio</label>
+      <input type="precio" id="precio" name="precio" required><br>
+
+      <button type="submit">Agregar Película</button>
+    </form>
+  </main>
+</body>
+</html>
+
+  
+  <!-- Lista de películas existentes -->
+  <h3>Películas Existentes</h3>
+  <ul>
+    <!-- Aquí deberías obtener las películas de tu base de datos y mostrarlas como elementos de la lista -->
+    <li>Película 1</li>
+    <li>Película 2</li>
+    <!-- Ejemplo de cómo mostrar una película -->
+    <!-- <li><a href="/admin/peliculas/1">Título de la Película</a></li> -->
+  </ul>
+  
+  <!-- Formulario para modificar una película -->
+  <form action="/admin/peliculas/modificar" method="POST">
+    <h3>Modificar Película</h3>
+    <label for="id_modificar">ID de Película:</label>
+    <input type="number" id="id_modificar" name="id_modificar" required><br>
+    <!-- Aquí deberías mostrar los campos de la película que pueden modificarse -->
+    <button type="submit">Modificar Película</button>
+  </form>
+  
+  <!-- Formulario para eliminar una película -->
+  <form action="/admin/peliculas/eliminar" method="POST">
+    <h3>Eliminar Película</h3>
+    <label for="id_eliminar">ID de Película:</label>
+    <input type="number" id="id_eliminar" name="id_eliminar" required><br>
+    <button type="submit">Eliminar Película</button>
+  </form>
+  
