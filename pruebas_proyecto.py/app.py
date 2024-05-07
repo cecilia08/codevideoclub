@@ -54,7 +54,7 @@ class User(UserMixin, db.Model):
         return check_password_hash(self.password_hash, password)
 
 login_manager = LoginManager(app)
-login_manager.login_view = 'inicio_sesion'
+login_manager.login_view = 'inicio'
 
 
 @login_manager.user_loader
@@ -90,7 +90,7 @@ def register():
         db.session.add(user)
         db.session.commit()
         flash('Te has registrado correctamente.', 'success')
-        return redirect(url_for('inicio_sesion'))
+        return redirect(url_for('inicio'))
     return render_template('registro.html', form=form)
 
 @app.route('/cerrar-sesion')
