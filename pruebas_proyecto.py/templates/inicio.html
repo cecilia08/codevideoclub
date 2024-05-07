@@ -4,31 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Retrocinema</title>
-  <link rel="stylesheet" href="style_inicio.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style_inicio.css') }}">
+</head>
+
+
 </head>
 <body>
   <header>
     <div class="logo">
-      <img src="logo.png" alt="Logo">
+      <img src="/logo_fondo/logo.png" alt="Logo">
     </div>
       <nav>
         <ul>
-          <li><a href="inicio.html">Inicio</a></li>
+          <li><a href="/inicio/inicio.html">Inicio</a></li>
           <li><a href="#0">Categoría</a>
             <ul>
-              <li><a href="accion.html">Acción</a></li>
-              <li><a href="aventura.html">Aventura</a></li>
-              <li><a href="comedia.html">Comedia</a></li>
-              <li><a href="ciencia_ficcion.html">Ciencia ficción</a></li>
-              <li><a href="drama.html">Drama</a></li>
-              <li><a href="romance.html">Romance</a></li>
+              <li><a href="/categorias/accion.html">Acción</a></li>
+              <li><a href="/categorias/aventura.html">Aventura</a></li>
+              <li><a href="/categorias/comedia.html">Comedia</a></li>
+              <li><a href="/categorias/ciencia_ficcion.html">Ciencia ficción</a></li>
+              <li><a href="/categorias/drama.html">Drama</a></li>
+              <li><a href="/categorias/romance.html">Romance</a></li>
             </ul>
-          </li>
-          <li><a href="configuracion.html">Configuración</a</li>
+            </li>
           <li>
             <a href="#0">Usuario</a>
             <ul>
-              <li><a href="inicio_sesion.html">Inicio sesión</a></li>
+              <li><a href="{{ url_for('inicio_sesion') }}">Inicio sesión</a></li>
               <li><a href="registro.html">Registro</a></li>
               <li><a href="cuenta.html">Cuenta</a></li>
               <li><a href="cerrar_sesion.html">Cerrar sesión</a></li>
@@ -57,59 +59,62 @@
       
       
   <main>
+    {% if current_user.is_authenticated %}
+  <h1>Hi {{ current_user.name }}!</h1>
+{% endif %}
     <div class="container">
       <div class="image-gallery">
         <h1></h1>
       <!-- Galería de imágenes -->
-        <a href="peliculas/goonies-detalles.html">
-          <img src="goonies.jpg" alt="Carátula de The Goonies" width="188" height="273">
+        <a href="/peliculas/goonies-detalles.html">
+          <img src="/imagenes/gonnies.png" alt="Carátula de The Goonies" width="188" height="273">
         </a>
         <a href="indianajones.html">
-          <img src="indianajones_arca.jpg" alt="Carátula de Indiana Jones"  width="188" height="273">
+          <img src="/imagenes/indianajones_arca.jpg" alt="Carátula de Indiana Jones"  width="188" height="273">
         </a>
         <a href="dirtydancing.html">
-          <img src="dirtydancing.jpg" alt="Carátula de Dirty Dancing"  width="188" height="273">
+          <img src="/imagenes/dirtydancing.jpg" alt="Carátula de Dirty Dancing"  width="188" height="273">
         </a>
         <a href="jungladecristal.html">
-          <img src="Jungladecristal.jpg" alt="Carátula de Jungla de cristal"  width="188" height="273">
+          <img src="/imagenes/Jungladecristal.jpg" alt="Carátula de Jungla de cristal"  width="188" height="273">
         </a>
       </a>
       <a href="torosalvaje.html">
-        <img src="torosalvaje.jpeg" alt="Carátula de Toro salvaje"  width="188" height="273">
+        <img src="/imagenes/torosalvaje.jpeg" alt="Carátula de Toro salvaje"  width="188" height="273">
       </a>
         <a href="atrapadoeneltiempo.html">
-          <img src="atrapadoeneltiempo.jpg" alt="Carátula de Atrapado en el tiempo"  width="188" height="273">
+          <img src="/imagenes/atrapadoeneltiempo.jpg" alt="Carátula de Atrapado en el tiempo"  width="188" height="273">
         </a>
         <a href="buenosmuchachos.html">
-          <img src="buenosmuchachos.webp" alt="Carátula de Buenos muchachos"  width="188" height="273">
+          <img src="/imagenes/buenosmuchachos.webp" alt="Carátula de Buenos muchachos"  width="188" height="273">
         </a>
         <a href="cadenaperpetua.html">
-          <img src="cadenaperpetua.jpg" alt="Carátula de Cadena perpetua"  width="188" height="273">
+          <img src="/imagenes/cadenaperpetua.jpg" alt="Carátula de Cadena perpetua"  width="188" height="273">
         </a>
         <a href="matrix.html">
-          <img src="matrix.jpg" alt="Carátula de Matrix"  width="188" height="273">
+          <img src="/imagenes/matrix.jpg" alt="Carátula de Matrix"  width="188" height="273">
         </a><a href="cazafantasmas.html">
-          <img src="cazafantasmas.webp" alt="Carátula de Cazafantasmas"  width="188" height="273">
+          <img src="/imagenes/cazafantasmas.webp" alt="Carátula de Cazafantasmas"  width="188" height="273">
         </a>
         <a href="starwars.html">
-          <img src="starwars.jpg" alt="Carátula de Star Wars"  width="188" height="273">
+          <img src="/imagenes/starwars.jpg" alt="Carátula de Star Wars"  width="188" height="273">
         </a>
         <a href="regresoalfuturo.html">
-          <img src="regresoalfuturo.jpg" alt="Carátula de "  width="Regreso al futuro" height="273">
+          <img src="/imagenes/regresoalfuturo.jpg" alt="Carátula de "  width="Regreso al futuro" height="273">
         </a>
         <a href="cuandoharryencontroasally.html">
-          <img src="cuando-harry-encontro-a-sally.jpg" alt="Carátula de Cuando Harry encontro a Sally"  width="188" height="273">
+          <img src="/imagenes/cuando-harry-encontro-a-sally.jpg" alt="Carátula de Cuando Harry encontro a Sally"  width="188" height="273">
         </a>
       </a>
       <a href="terminator.html">
-        <img src="terminator.jpg" alt="Carátula de Terminator"  width="188" height="273">
+        <img src="/imagenes/terminator.jpg" alt="Carátula de Terminator"  width="188" height="273">
       </a>
         <a href="soloencasa.html">
-          <img src="solonecasa.webp" alt="Carátula de Solo en casa"  width="188" height="273">
+          <img src="/imagenes/solonecasa.webp" alt="Carátula de Solo en casa"  width="188" height="273">
         </a>
       </a>
       <a href="princesaprometida.html">
-        <img src="princesaprometida.webp" alt="Carátula de Princesa prometida"  width="188" height="273">
+        <img src="/imagenes/princesaprometida.webp" alt="Carátula de Princesa prometida"  width="188" height="273">
       </a>
 
 
@@ -124,9 +129,9 @@
       <p>&copy; 2024 Retrocinema</p>
       <div class="footer-buttons">
        
-        <a href="avisos_legales.html" class="button">Avisos legales</a>
-        <a href="politicas_cookies.html" class="button">Políticas de cookies</a>
-        <a href="politicas_privacidad.html" class="button">Políticas de privacidad</a>
+        <a href="/footer/avisos_legales.html" class="button">Avisos legales</a>
+        <a href="/footer/politicas_cookies.html" class="button">Políticas de cookies</a>
+        <a href="/footer/politicas_privacidad.html" class="button">Políticas de privacidad</a>
       
         
       </div>
