@@ -90,7 +90,7 @@ def register():
         db.session.add(user)
         db.session.commit()
         flash('Te has registrado correctamente.', 'success')
-        return redirect(url_for('inicio'))
+        return redirect(url_for('inicio_sesion'))
     return render_template('registro.html', form=form)
 
 @app.route('/cerrar-sesion')

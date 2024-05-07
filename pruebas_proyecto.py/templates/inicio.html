@@ -30,7 +30,7 @@
           <li>
             <a href="#0">Usuario</a>
             <ul>
-              <li><a href="inicio_sesion.html">Inicio sesión</a></li>
+              <li><a href="{{ url_for('inicio_sesion') }}">Inicio sesión</a></li>
               <li><a href="registro.html">Registro</a></li>
               <li><a href="cuenta.html">Cuenta</a></li>
               <li><a href="cerrar_sesion.html">Cerrar sesión</a></li>
@@ -59,6 +59,9 @@
       
       
   <main>
+    {% if current_user.is_authenticated %}
+  <h1>Hi {{ current_user.name }}!</h1>
+{% endif %}
     <div class="container">
       <div class="image-gallery">
         <h1></h1>
