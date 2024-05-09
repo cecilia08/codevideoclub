@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Categoría Ciencia ficción - Retrocinema{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+  <div class="movies">
+    {% for pelicula in peliculas %}
+      <div style="text-align: center;">
+        <img src="{{ url_for('static', filename='css/img/' + pelicula['caratula']) }}" height="350px" width="250px" alt="{{ pelicula['titulo'] }}">
+        <br>
+      </div>
+    {% endfor %}
+  </div>
+  <br>
+  <a href="{{ url_for('index') }}" class="button">Volver a Inicio</a>
+{% endblock %}
