@@ -18,7 +18,7 @@ jsnfile = 'data.json'
 
 # Clase Película para almacenar datos de películas
 class Pelicula:
-    def __init__(self, titulo, resumen, caratula, precio_alquiler, categoria):
+    def __init__(self, titulo, resumen, caratula, categoria, precio_alquiler):
         self.titulo = titulo
         self.resumen = resumen
         self.caratula = caratula
@@ -30,8 +30,8 @@ class Pelicula:
             'titulo': self.titulo,
             'resumen': self.resumen,
             'caratula': self.caratula,
-            'precio_alquiler': self.precio_alquiler,
-            'categoria': self.categoria
+            'categoria': self.categoria,
+            'precio_alquiler': self.precio_alquiler
         }
 
 # Cargar datos de películas desde data.json
@@ -44,22 +44,22 @@ def cargar_peliculas():
                 "titulo": "Star Wars",
                 "resumen": "En una galaxia muy, muy lejana...",
                 "caratula": "static/img/star_wars.jpg",
-                "precio_alquiler": 5.99,
-                "categoria": "ciencia_ficcion"
+                "categoria": "ciencia_ficcion",
+                "precio_alquiler": 5.99
             },
             {
                 "titulo": "Jurassic Park",
                 "resumen": "Un parque temático con dinosaurios...",
                 "caratula": "static/img/jurassic_park.jpg",
-                "precio_alquiler": 4.99,
-                "categoria": "aventura"
+                "categoria": "aventura",
+                "precio_alquiler": 4.99
             },
             {
                 "titulo": "Titanic",
                 "resumen": "Un romance épico en alta mar...",
                 "caratula": "static/img/titanic.jpg",
-                "precio_alquiler": 6.99,
-                "categoria": "romance"
+                "categoria": "romance",
+                "precio_alquiler": 6.99
             }
 ]
 
@@ -94,6 +94,7 @@ class NuevaPeliculaForm(FlaskForm):
     resumen = StringField('Resumen', validators=[DataRequired()])
     caratula = StringField('URL de Carátula', validators=[DataRequired()])
     precio_alquiler = StringField('Precio de Alquiler', validators=[DataRequired()])
+    categoria = StringField('Categoría', validators=[DataRequired()])
     inventario = StringField('Inventario', validators=[DataRequired()])
     submit = SubmitField('Agregar')
 
@@ -146,12 +147,7 @@ def load_user(user_id):
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    if current_user.is_authenticated and current_user.role == 'premium':
-        peliculas = cargar_peliculas()
-        return render_template('agregar_pelicula.html', peliculas=peliculas)
-    else:
-        peliculas = cargar_peliculas()
-        return render_template('inicio.html', peliculas=peliculas)
+    return render_template('inicio.html', peliculas=peliculas)
 
 @app.route('/inicio_sesion', methods=['GET', 'POST'])
 def inicio_sesion():
@@ -176,8 +172,7 @@ def registro():
         user.set_password(form.password.data) 
         db.session.add(user)
         db.session.commit()
-        flash('Te has registrado correctamente.', 'success')
-        return redirect(url_for('inicio'))
+        return redirect(url_for('index'))
     return render_template('registro.html', form=form)
 
 @app.route('/cerrar_sesion')
@@ -194,9 +189,10 @@ def consola():
         titulo = form.titulo.data
         resumen = form.resumen.data
         caratula = form.caratula.data
+        categoria = form.categoria.data
         precio_alquiler = form.precio_alquiler.data
 
-        pelicula = Pelicula(titulo, resumen, caratula, precio_alquiler)
+        pelicula = Pelicula(titulo, resumen, caratula, categoria, precio_alquiler)
 
         # Cargar películas existentes
         peliculas = cargar_peliculas()

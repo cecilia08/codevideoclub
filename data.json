@@ -25,13 +25,13 @@
         "resumen": "Una pel\u00edcula...",
         "caratula": "gonnies.png",
         "precio_alquiler": "7.00",
-        "categoria": "1"
+        "categoria": "aventura"
     },
     {
         "titulo": "Toro Salvaje",
         "resumen": "Una pel\u00edcula...",
         "caratula": "torosalvaje.jpeg",
         "precio_alquiler": "87",
-        "categoria": "1"
+        "categoria": "aventura"
     }
 ]
