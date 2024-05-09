@@ -1,0 +1,37 @@
+[
+    {
+        "titulo": "Star Wars",
+        "resumen": "En una galaxia muy, muy lejana...",
+        "caratula": "starwars.jpg",
+        "precio_alquiler": 5.99,
+        "categoria": "ciencia_ficcion"
+    },
+    {
+        "titulo": "Jurassic Park",
+        "resumen": "Un parque tem\u00e1tico con dinosaurios...",
+        "caratula": "matrix.jpg",
+        "precio_alquiler": 4.99,
+        "categoria": "aventura"
+    },
+    {
+        "titulo": "Titanic",
+        "resumen": "Un romance \u00e9pico en alta mar...",
+        "caratula": "terminator.jpg",
+        "precio_alquiler": 6.99,
+        "categoria": "romance"
+    },
+    {
+        "titulo": "Gonnies",
+        "resumen": "Una pel\u00edcula...",
+        "caratula": "gonnies.png",
+        "precio_alquiler": "7.00",
+        "categoria": "1"
+    },
+    {
+        "titulo": "Toro Salvaje",
+        "resumen": "Una pel\u00edcula...",
+        "caratula": "torosalvaje.jpeg",
+        "precio_alquiler": "87",
+        "categoria": "1"
+    }
+]
