@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agregar Película</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> <!-- Ajusta la ruta a tu archivo CSS -->
-</head>
-<body>
-    <h1>Agregar Nueva Película</h1>
+{% extends "base.html" %}
 
-
-
+{% block content %}
+<main>
     <form method="POST" action="{{ url_for('consola') }}" class="formulario">
         {{ form.hidden_tag() }} 
 
@@ -50,8 +41,8 @@
         </div>
     </form>
     <br>
-    <a href="{{ url_for('index') }}">Volver a la página principal</a> <!-- Ajusta la ruta según tu aplicación -->
+    <a href="{{ url_for('index') }}">Volver a la página principal</a> 
 
-    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script> <!-- Ajusta la ruta a tu archivo JavaScript -->
-</body>
-</html>
+    
+    <main>
+    {% endblock content %}

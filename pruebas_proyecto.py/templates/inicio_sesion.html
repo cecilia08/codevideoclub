@@ -1,9 +1,6 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Login</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
     <h1>Login</h1>
     {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}
@@ -32,5 +29,4 @@
             {{ form.submit() }}
         </div>
     </form>
-</body>
-</html>
+    {% endblock content %}

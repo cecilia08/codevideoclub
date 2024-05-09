@@ -93,7 +93,7 @@ header {
     font-size: 0.9rem;
     gap: 0.5rem;
     align-items: center;
-    justify-content: right;
+    justify-content: center;
     width: var(--width-of-input);
     position: relative;
     isolation: isolate;
@@ -118,7 +118,7 @@ header {
     padding-inline: var(--inline-padding-of-input);
     display: flex;
     align-items: center;
-    justify-content: right;
+    justify-content: start;
   }
   
   .search,.close-btn {
@@ -158,7 +158,7 @@ header {
     margin-inline: min(2em,calc(var(--inline-padding-of-input) + var(--gap)));
     background: none;
     border: none;
-    justify-content: right;
+    justify-content: center !important;
   }
   
   .input:focus {
@@ -241,7 +241,15 @@ header {
     border-radius: 4px;
     margin-right: 10px;
 }
-
+.centrado_form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  width: 80vw;
+  display: block;
+  margin: 0 auto;
+}
 .button:hover {
     background-color: #cf6666;
 }

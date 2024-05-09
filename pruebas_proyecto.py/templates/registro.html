@@ -1,20 +1,7 @@
-<!-- register.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
     <h1>Registro</h1>
-    {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-            {% for category, message in messages %}
-                <div class="alert alert-{{ category }}">{{ message }}</div>
-            {% endfor %}
-        {% endif %}
-    {% endwith %}
+    <div>
     <form method="POST">
         {{ form.hidden_tag() }}
         <div>
@@ -48,6 +35,6 @@
         <div>
             {{ form.submit() }}
         </div>
+    </div>
     </form>
-</body>
-</html>
+{% endblock content %}
