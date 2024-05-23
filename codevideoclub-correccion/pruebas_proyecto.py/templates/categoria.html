@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="movies">
+    {% for pelicula in peliculas %}
+      <div class="movie-item">
+        <img class="movie-poster" src="{{ url_for('static', filename='css/img/' + pelicula['caratula']) }}" alt="{{ pelicula['titulo'] }}">
+        <div class="movie-info">
+          <h3>{{ pelicula['titulo'] }}</h3>
+          <p><strong>Resumen:</strong> {{ pelicula['resumen'] }}</p>
+          <p><strong>Categoría:</strong> {{ pelicula['categoria'] }}</p>
+          <p><strong>Precio Alquiler:</strong> {{ pelicula['precio_alquiler'] }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <br>
+  <a href="{{ url_for('index') }}" class="button">Volver a Inicio</a>
+{% endblock content %}

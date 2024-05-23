@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Registra usuarios</h1>
+    <div>
+        <!-- Formulario para registrar un nuevo usuario -->
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            <div>
+                {{ form.username.label }}
+                {{ form.username(size=20) }}
+                {% for error in form.username.errors %}
+                    <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+            </div>
+            <div>
+                {{ form.password.label }}
+                {{ form.password(size=20) }}
+                {% for error in form.password.errors %}
+                    <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+            </div>
+            <div>
+                {{ form.confirm_password.label }}
+                {{ form.confirm_password(size=20) }}
+                {% for error in form.confirm_password.errors %}
+                    <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+            </div>
+            {% if current_user.is_authenticated %}
+                {% if current_user.role == 'manager' %}
+                <div>
+                    {{ form.role.label }}
+                    {{ form.role() }}
+                    {% for error in form.role.errors %}
+                        <span style="color: red;">{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            {% endif %}
+            <div>
+                {{ form.submit() }}
+              
+            </div>
+        </form>
+    </div>
+
+    <!-- Sección para mostrar todos los usuarios registrados -->
+
+    
+    {% if current_user.is_authenticated %}
+        {% if current_user.role == 'manager' %}
+        <h2>Usuarios registrados:</h2>
+        <ul>
+            {% for user in users %}
+                <li>{{ user.username }} - {{ user.role }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    {% endif %}
+{% endblock content %}

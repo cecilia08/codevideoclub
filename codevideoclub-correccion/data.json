@@ -1,0 +1,58 @@
+[
+    {
+        "titulo": "Star Wars",
+        "resumen": "En una galaxia muy, muy lejana...",
+        "caratula": "starwars.jpg",
+        "categoria": "ciencia_ficcion",
+        "precio_alquiler": 5.99,
+        "precio_compra": 10
+    },
+    {
+        "titulo": "Jurassic Park",
+        "resumen": "Un parque tem\u00e1tico con dinosaurios...",
+        "caratula": "matrix.jpg",
+        "categoria": "aventura",
+        "precio_alquiler": 4.99,
+        "precio_compra": 10
+    },
+    {
+        "titulo": "Titanic",
+        "resumen": "Un romance \u00e9pico en alta mar...",
+        "caratula": "terminator.jpg",
+        "categoria": "romance",
+        "precio_alquiler": 6.99,
+        "precio_compra": 10
+    },
+    {
+        "titulo": "Gonnies",
+        "resumen": "Una pel\u00edcula...",
+        "caratula": "gonnies.png",
+        "categoria": "aventura",
+        "precio_alquiler": "7.00",
+        "precio_compra": 10
+    },
+    {
+        "titulo": "Toro Salvaje",
+        "resumen": "Una pel\u00edcula...",
+        "caratula": "torosalvaje.jpeg",
+        "categoria": "aventura",
+        "precio_alquiler": "87",
+        "precio_compra": 10
+    },
+    {
+        "titulo": "Solo en Casa2",
+        "resumen": "Resumen solo en casa",
+        "caratula": "solonecasa.webp",
+        "categoria": "comedia",
+        "precio_alquiler": 7.0,
+        "precio_compra": 10
+    },
+    {
+        "titulo": "pelicula",
+        "resumen": "resumen",
+        "caratula": "solonecasa.webp",
+        "categoria": "suspense",
+        "precio_alquiler": 3.0,
+        "precio_compra": 10
+    }
+]

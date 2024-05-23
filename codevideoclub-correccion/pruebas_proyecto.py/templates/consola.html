@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <main>
+    <form method="POST" action="{{ url_for('consola') }}" class="formulario">
+      {{ form.hidden_tag() }} 
+
+      <div>
+        <p>{{ form.titulo.label }}</p>
+      </div>
+      <div>
+        {{ form.titulo }}
+      </div>
+
+      <div>
+        <p>{{ form.resumen.label }}</p>
+      </div>
+
+      <div>
+        {{ form.resumen }}
+      </div>
+
+      <div>
+        <p>{{ form.caratula.label }}</p>
+      </div>
+
+      <div>
+        {{ form.caratula }}
+      </div>
+      
+      <div>
+        <p>{{ form.categoria.label }}</p>
+      </div>
+
+      <div>
+        {{ form.categoria }}
+      </div>
+      
+      <div>
+        <p>{{ form.precio_alquiler.label }}</p>
+      </div>
+
+      <div>
+        {{ form.precio_alquiler }}
+      </div>
+      
+      <br>
+      <div>
+        {{ form.submit(class="boton") }}
+      </div>
+    </form>
+    <br>
+    <a href="{{ url_for('index') }}">Volver a la página principal</a> 
+
+    <div class="container">
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>Título</th>
+            <th>Resumen</th>
+            <th>Carátula</th>
+            <th>Precio Alquiler</th>
+            <th>Categoría</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for pelicula in peliculas %}
+            <tr>
+              <td>{{ pelicula.titulo }}</td>
+              <td>{{ pelicula.resumen }}</td>
+              <td>
+                <img height="350px" width="250px" src="{{ url_for('static', filename='css/img/' + pelicula.caratula) }}" alt="Carátula">
+              </td>
+              <td>{{ pelicula.precio_alquiler }}</td>
+              <td>{{ pelicula.categoria }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </main>
+{% endblock content %}

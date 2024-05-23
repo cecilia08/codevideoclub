@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+  <main>
+    {% if current_user.is_authenticated %}
+      <h1>¡Hola {{ current_user.username.title() }}!</h1>
+    {% endif %}
+    <div class="container">
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>Título</th>
+            <th>Resumen</th>
+            <th>Carátula</th>
+            <th>Categoría</th>
+            <th>Precio Alquiler</th>
+            <th>Precio Compra</th>
+            <th>Alquilar/Comprar</th> <!-- Nueva columna para los botones -->
+          </tr>
+        </thead>
+        <tbody>
+          {% for pelicula in peliculas %}
+            <tr>
+              <td>{{ pelicula['titulo'] }}</td>
+              <td>{{ pelicula['resumen'] }}</td>
+              <td class="movie-poster-cell">
+                <img class="movie-poster" src="{{ url_for('static', filename='css/img/' + pelicula['caratula']) }}" alt="Carátula">
+              </td>
+              <td>{{ pelicula['categoria'] }}</td>
+              <td>{{ pelicula['precio_alquiler'] }}</td>
+              <td>{{ pelicula['precio_compra'] }}</td>
+              <td> <!-- Agrega los botones dentro de esta celda -->
+                <form action="URL_para_alquilar">
+                  <input type="hidden" name="pelicula_id" value="{{ pelicula['id'] }}">
+                  <button type="submit">Alquilar</button>
+                </form>
+                <form action="URL_para_comprar">
+                  <input type="hidden" name="pelicula_id" value="{{ pelicula['id'] }}">
+                  <button type="submit">Comprar</button>
+                </form>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <div class="container">
+      
+    </div>
+  </main>
+{% endblock content %}

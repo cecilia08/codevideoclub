@@ -1,0 +1,51 @@
+[
+    {
+        "titulo": "Star Wars",
+        "resumen": "En una galaxia muy, muy lejana...",
+        "caratula": "starwars.jpg",
+        "categoria": "ciencia_ficcion",
+        "precio_alquiler": 5.99
+    },
+    {
+        "titulo": "Matrix",
+        "resumen": "Thomas Anderson es un brillante programador de una respetable compania de software....",
+        "caratula": "matrix.jpg",
+        "categoria": "aventura",
+        "precio_alquiler": 4.99
+    },
+    {
+        "titulo": "Terminator",
+        "resumen": "Las maquinas dominan el mundo. Los rebeldes que luchan contra ellas tienen como l\u00edder a John Connor...",
+        "caratula": "terminator.jpg",
+        "categoria": "ciencia_ficcion",
+        "precio_alquiler": 6.99
+    },
+    {
+        "titulo": "Los Gonnies",
+        "resumen": "Mikey es un nino de trece anos que junto con su hermano mayor y sus amigos forman un grupo que se hacen llamar los Goonies.",
+        "caratula": "gonnies.png",
+        "categoria": "aventura",
+        "precio_alquiler": "7.00"
+    },
+    {
+        "titulo": "Solo en Casa",
+        "resumen": "Kevin McAllister es un nino de ocho anos, miembro de una familia numerosa, que accidentalmente se queda abandonado en su casa...",
+        "caratula": "solonecasa.webp",
+        "categoria": "comedia",
+        "precio_alquiler": 6.5
+    },
+    {
+        "titulo": "Regreso al futuro",
+        "resumen": "El adolescente Marty McFly es amigo de Doc, un cient\u00edfico al que todos toman por loco...",
+        "caratula": "regresoalfuturo.jpg",
+        "categoria": "aventura",
+        "precio_alquiler": 5.0
+    },
+    {
+        "titulo": "Toro Salvaje",
+        "resumen": "una pelicula....",
+        "caratula": "torosalvaje.jpeg",
+        "categoria": "aventura",
+        "precio_alquiler": 7.0
+    }
+]
